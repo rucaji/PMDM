@@ -1,0 +1,10 @@
+# Memoria APAC1 Login
+per Rufino Camarena Jiménez , 2 DAM semipresencial
+
+  * En aquesta pràctica accedim a diferents parts de l'aplicació per a aconseguir obtindre el resultat desitjat: a partir dels xml donats els passem a text i creem els activity_*main.xml i el activity_welcome.xml (després d'haver creat una nova activity buida) .
+  He importat la imatge donada del PMDM arrossegant-la fins a la carpeta resources/drawable. He creat les constants tipus editText i TextView en el onCreate() de la activity_main, he hagut de crear un nou textView per a posar el comptador d'intents fallits al costat del text donat. Mitjançant .hint() he introduït el text que es veu en pantalla abans d'introduir l'usuari i contrasenya
+  També es crea un element tipus botó amb el text "Login" i se li indica amb el setOnClickListener() que ocorre si es prem
+  * La navegació entre les dues activity ocorre en introduir correctament en l'activitat principal l'usuari i la contrasenya i prémer el botó Login si no s'han consumit els tres intents possibles. Si és així s'accedeix a la segona activitat mitjançant un intent on es dona la benvinguda a l'usuari (a través de dos textView) que és proporcionat de la 1 a la 2 en passar-ho en un putExtra() en el intent. 
+  * Apareixen dues activitats configurades , la principal i la welcome , en el AndroidManifest. Les diferències principals són que la principal l'atribut android:exported és true mentre que en la welcome és false. I que la principal té configurat un intent. 
+  * L'atribut exported reflecteix si l'activitat serà accessible des de fora de l'aplicació , de manera que podrà rebre informació o ser invocada per altres aplicacions, true és que si podrà i false que no.
+  * En crear els recursos tipus String en les activitats, s'incorporen al fitxer cap de bestiar/values/strings.xml . i en crear els idiomes addicionals ÉS(espanyol) i CA(català) es creen dues noves carpetes amb el contingut dels strings i allí devem que modificar-los amb la traducció dels strings . D'aquesta manera després es podran realitzar les traduccions des de l'aplicació si són sol·licitades amb un canvi d'idioma per l'usuari de l'aplicació.
